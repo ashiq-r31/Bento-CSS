@@ -1,0 +1,18 @@
+
+$colors : (
+  purple: (
+      base:   #8A65E8,
+      light:  #A785FF,
+      dark:   #7955D4
+  ),
+  grey: (
+      base:  #C2C2C2,
+      light: #EEEEEE,
+      dark: #898989,
+      darker: #474747
+  )
+);
+
+@function colors($color-name, $color-variant) {
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}

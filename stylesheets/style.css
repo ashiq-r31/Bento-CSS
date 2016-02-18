@@ -1,0 +1,83 @@
+html {
+  font-family: 'Karla',sans-serif;
+  font-size: 10px; }
+
+body {
+  font-size: 1.6rem; }
+
+/*font weight*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+/*Primary typographic adjustments*/
+p, li {
+  font-size: 1.6rem; }
+
+h1 {
+  font-size: 3.6rem;
+  color: #8A65E8; }
+
+h2 {
+  font-size: 3.0rem; }
+
+h3 {
+  font-size: 2.4rem; }
+
+h4 {
+  font-size: 1.8rem; }
+
+h5 {
+  font-size: 1.6rem; }
+
+h6 {
+  font-size: 1.4rem; }
+
+/*Override HTML element default styles that is not part of normalize.css*/
+a {
+  text-decoration: none; }
+
+button {
+  background-color: inherit;
+  outline: none; }
+
+/*----Button Styles----*/
+/*mixin for flexibility of changing the button size for example more padding on left & right*/
+/*placeholder to reduce code duplication*/
+.btn-full, .btn-empty, .form-input {
+  border: 2px solid;
+  border-radius: 0.3rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem; }
+
+.btn-full, .btn-empty {
+  border-color: #8A65E8; }
+
+/*main button styles*/
+.btn-full {
+  background-color: #8A65E8;
+  color: white;
+  transition: background-color 0.2s ease-in-out; }
+  .btn-full:hover {
+    background-color: #7955D4;
+    border-color: #7955D4;
+    transition: background-color 0.2s ease-in-out; }
+.btn-empty {
+  color: #8A65E8;
+  transition: background-color 0.2s ease-in-out; }
+  .btn-empty:hover {
+    background-color: #EEEEEE;
+    transition: background-color 0.2s ease-in-out; }
+
+input {
+  outline: none;
+  background-color: white; }
+
+.form-input {
+  border-color: #EEEEEE; }
+
+body {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

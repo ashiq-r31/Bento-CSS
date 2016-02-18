@@ -1,0 +1,49 @@
+html {
+  font-family:'Karla',sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/*font weight*/
+%font-regular {
+  font-weight:300;
+}
+
+/*Primary typographic adjustments*/
+p, li  {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+  @extend %font-regular;
+  color:colors(purple, base);
+}
+
+h2 {
+  font-size: 3.0rem;
+  @extend %font-regular;
+}
+
+h3 {
+  font-size: 2.4rem;
+  @extend %font-regular;
+}
+
+h4 {
+  font-size: 1.8rem;
+  @extend %font-regular;
+}
+
+h5 {
+  font-size: 1.6rem;
+  @extend %font-regular;
+}
+
+h6 {
+  font-size: 1.4rem;
+  @extend %font-regular;
+}
