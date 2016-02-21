@@ -1,13 +1,68 @@
 input {
+  display:inline-block;
   outline:none;
   background-color:white;
+}
+
+ul,
+li {
+  padding:0;
+  margin:0;
 }
 
 %input-color {
   border-color:colors(grey, light);
 }
 
-.form-input {
+.form-input,
+.dropdown-select,
+.dropdown-list {
+  @include el-spacing(1rem, 1rem, 1rem, 1rem);
   @extend %el-build;
   @extend %input-color;
+}
+
+input:placeholder-shown{
+  color:colors(grey, dark);
+}
+
+.dropdown {
+  display:inline-block;
+  min-width:200px;
+  position:relative;
+  background-color:white;
+
+  &:after {
+  content: "";
+   width: 0;
+   height: 0;
+   position: absolute;
+   right: 2rem;
+   top: 50%;
+   margin-top: -6px;
+   border-width: 6px 0 6px 6px;
+   border-style: solid;
+   border-color: transparent colors(purple, base);
+   transform:rotate(90deg);
+  }
+
+  .dropdown-select {
+    color:colors(purple, base);
+    min-width:inherit;
+    background-color:inherit;
+  }
+
+  .dropdown-list {
+    display:none;
+    position:absolute;
+    top:4rem;
+    min-width:inherit;
+    background-color:inherit;
+
+    li {
+      @include el-spacing(1rem, 0rem, 1rem, 0rem);
+      list-style:none;
+      text-align:left;
+    }
+  }
 }

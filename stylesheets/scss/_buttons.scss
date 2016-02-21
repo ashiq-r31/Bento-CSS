@@ -22,7 +22,6 @@ button {
 %el-build {
   border:2px solid;
   border-radius:0.3rem;
-  @include el-spacing(1rem, 1rem, 1rem, 1rem);
 }
 
 %btn-outline {
@@ -34,6 +33,7 @@ button {
   &-full {
     background-color: colors(purple, base);
     color:white;
+    @include el-spacing(1rem, 1rem, 1rem, 1rem);
     @extend %el-build;
     @extend %btn-outline;
     transition:background-color 0.2s ease-in-out;
@@ -46,6 +46,7 @@ button {
   }
   &-empty {
     color:colors(purple, base);
+    @include el-spacing(1rem, 1rem, 1rem, 1rem);
     @extend %el-build;
     @extend %btn-outline;
     transition:background-color 0.2s ease-in-out;
