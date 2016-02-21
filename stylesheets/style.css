@@ -99,8 +99,10 @@ li {
   padding-bottom: 1rem;
   padding-right: 1rem; }
 
-input:placeholder-shown {
-  color: #898989; }
+.label {
+  color: #8A65E8;
+  position: relative;
+  top: -0.5rem; }
 
 .dropdown {
   display: inline-block;
@@ -120,15 +122,15 @@ input:placeholder-shown {
     border-color: transparent #8A65E8;
     transform: rotate(90deg); }
   .dropdown .dropdown-select {
-    color: #8A65E8;
+    color: #898989;
     min-width: inherit;
     background-color: inherit; }
   .dropdown .dropdown-list {
-    display: none;
     position: absolute;
     top: 4rem;
     min-width: inherit;
-    background-color: inherit; }
+    background-color: inherit;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1); }
     .dropdown .dropdown-list li {
       padding-top: 1rem;
       padding-left: 0rem;

@@ -22,8 +22,10 @@ li {
   @extend %input-color;
 }
 
-input:placeholder-shown{
-  color:colors(grey, dark);
+.label {
+  color:colors(purple, base);
+  position:relative;
+  top:-0.5rem;
 }
 
 .dropdown {
@@ -47,17 +49,17 @@ input:placeholder-shown{
   }
 
   .dropdown-select {
-    color:colors(purple, base);
+    color:colors(grey, dark);
     min-width:inherit;
     background-color:inherit;
   }
 
   .dropdown-list {
-    display:none;
     position:absolute;
     top:4rem;
     min-width:inherit;
     background-color:inherit;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
 
     li {
       @include el-spacing(1rem, 0rem, 1rem, 0rem);

@@ -11,19 +11,39 @@
 <h6>Hello World</h6> -->
 
 <form>
+
   <input size="20%" class="form-input" type="text" placeholder="Enter favorite season">
   <div class="dropdown">
     <div class="dropdown-select">Select a TV Show</div>
-    <ul class="dropdown-list">
-      <li>Option 1</li>
-      <li>Option 2</li>
+    <ul style="display:none" class="dropdown-list">
+      <li>Game of Thrones</li>
+      <li>Fargo</li>
+      <li>Hannibal</li>
+      <li>House M.D.</li>
+      <li>Parks & Recreation</li>
     </ul>
   </div>
   <input class="btn-full" type="submit" value="Add Show">
   <input class="btn-empty" type="submit" value="Clear">
 
-
-
-
 </form>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+  $(".dropdown-select").click(function(event) {
+      event.stopPropagation();
+      $(".dropdown-list").toggle(100);
+  });
+
+  $(".dropdown-list li").click(function(event) {
+    var clickedItem = $(this).text();
+    $(".dropdown-select").text(clickedItem);
+    $(".dropdown-select").css("color","#8A65E8");
+  });
+
+  $(document).click(function(event){
+    $(".dropdown-list").hide(100);
+  });
+
+</script>
 <!-- <a class="btn-empty" href="#">See More</a> -->
