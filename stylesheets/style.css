@@ -43,7 +43,7 @@ button {
 /*----Button Styles----*/
 /*mixin for flexibility of changing the button size for example more padding on left & right*/
 /*placeholder to reduce code duplication*/
-.btn-full, .btn-empty, .form-input,
+.btn-full, .btn-empty, .input,
 .dropdown-select,
 .dropdown-list {
   border: 2px solid;
@@ -86,12 +86,12 @@ li {
   padding: 0;
   margin: 0; }
 
-.form-input,
+.input,
 .dropdown-select,
 .dropdown-list {
   border-color: #EEEEEE; }
 
-.form-input,
+.input,
 .dropdown-select,
 .dropdown-list {
   padding-top: 1rem;
@@ -99,13 +99,17 @@ li {
   padding-bottom: 1rem;
   padding-right: 1rem; }
 
+.input-group,
+.dropdown-group {
+  display: inline-block; }
+
 .label {
+  display: block;
   color: #8A65E8;
   position: relative;
   top: -0.5rem; }
 
 .dropdown {
-  display: inline-block;
   min-width: 200px;
   position: relative;
   background-color: white; }

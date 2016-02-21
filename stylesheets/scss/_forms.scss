@@ -14,7 +14,7 @@ li {
   border-color:colors(grey, light);
 }
 
-.form-input,
+.input,
 .dropdown-select,
 .dropdown-list {
   @include el-spacing(1rem, 1rem, 1rem, 1rem);
@@ -22,14 +22,19 @@ li {
   @extend %input-color;
 }
 
+.input-group,
+.dropdown-group {
+  display:inline-block;
+}
+
 .label {
+  display:block;
   color:colors(purple, base);
   position:relative;
   top:-0.5rem;
 }
 
 .dropdown {
-  display:inline-block;
   min-width:200px;
   position:relative;
   background-color:white;
