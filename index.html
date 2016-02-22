@@ -12,31 +12,33 @@
 
 <form>
   <div class="input-group">
-    <label class="label">Last Name</label>
+
     <input class="input" type="text" placeholder="Enter favorite season">
   </div>
 
-  <div class="dropdown-group">
 
-    <label class="label">First Name</label>
-
-    <div class="dropdown">
-      <div class="dropdown-select">Select a TV Show</div>
-      <ul style="display:none" class="dropdown-list">
-        <li>Game of Thrones</li>
-        <li>Fargo</li>
-        <li>Hannibal</li>
-        <li>House M.D.</li>
-        <li>Parks & Recreation</li>
-      </ul>
-    </div>
-
-  </div>
 
   <input class="btn-full" type="submit" value="Add Show">
   <input class="btn-empty" type="submit" value="Clear">
 
 </form>
+
+<div class="dropdown-group">
+
+  <div class="dropdown">
+    <div class="dropdown-select">Select a TV Show</div>
+    <ul style="display:none" class="dropdown-list">
+      <li>Game of Thrones</li>
+      <li>Fargo</li>
+      <li>Hannibal</li>
+      <li>House M.D.</li>
+      <li>Parks & Recreation</li>
+    </ul>
+  </div>
+
+</div>
+
+<h1>Hello World</h1>
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
@@ -47,8 +49,11 @@
 
   $(".dropdown-list li").click(function(event) {
     var clickedItem = $(this).text();
+    $(".dropdown-list li").removeClass("checkmark");
+    $(this).addClass("checkmark");
     $(".dropdown-select").text(clickedItem);
     $(".dropdown-select").css("color","#8A65E8");
+
   });
 
   $(document).click(function(event){
