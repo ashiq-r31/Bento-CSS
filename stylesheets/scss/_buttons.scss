@@ -1,58 +1,32 @@
-/*Override HTML element default styles that is not part of normalize.css*/
-a {
-  text-decoration: none;
-}
-
-button {
-  background-color: inherit;
-  outline:none;
-}
-
-/*----Button Styles----*/
-
-/*mixin for flexibility of changing the button size for example more padding on left & right*/
-@mixin el-spacing($top, $left, $down, $right) {
-  padding-top:$top;
-  padding-left: $left;
-  padding-bottom:$down;
-  padding-right: $right;
-}
-
-/*placeholder to reduce code duplication*/
-%el-build {
-  border:2px solid;
-  border-radius:0.3rem;
-}
-
-%btn-outline {
-  border-color: colors(purple, base);
+%button-border-color {
+  border-color: $color-button-border;
 }
 
 /*main button styles*/
 .btn {
   &-full {
     background-color: colors(purple, base);
-    color:white;
-    @include el-spacing(1rem, 1rem, 1rem, 1rem);
-    @extend %el-build;
-    @extend %btn-outline;
+    color:$color-button-full-text;
+    @extend %el-theme-padding;
+    @extend %el-theme-border-style;
+    @extend %button-border-color;
     transition:background-color 0.2s ease-in-out;
 
     &:hover {
-        background-color:colors(purple, dark);
+        background-color:$color-button-full-hover;
         border-color:colors(purple, dark);
         transition:background-color 0.2s ease-in-out;
       }
   }
   &-empty {
-    color:colors(purple, base);
-    @include el-spacing(1rem, 1rem, 1rem, 1rem);
-    @extend %el-build;
-    @extend %btn-outline;
+    color:$color-button-empty-text;
+    @extend %el-theme-padding;
+    @extend %el-theme-border-style;
+    @extend %button-border-color;
     transition:background-color 0.2s ease-in-out;
 
     &:hover {
-        background-color:colors(grey, light);
+        background-color:$color-button-empty-hover;
         transition:background-color 0.2s ease-in-out;
       }
   }

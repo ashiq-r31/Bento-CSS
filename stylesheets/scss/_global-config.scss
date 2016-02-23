@@ -1,0 +1,76 @@
+//Font Stacks
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Karla:400,700';
+
+$font-family--primary    : 'Karla','Helvetica Neue', Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Arial, sans-serif;
+
+//Font Weights
+$font-weight--regular : 400;
+$font-weight--bold    : 700;
+
+//Text
+$base__font-size : 10px;
+$base__line      : 24px;
+
+
+//Descriptive Base colors
+
+$colors : (
+    purple : (
+        base:   #8A65E8,
+        light:  #A785FF,
+        dark:   #7955D4
+    ),
+    grey : (
+        base:  #C2C2C2,
+        light: #EEEEEE,
+        dark: #898989,
+        darker: #474747
+    )
+);
+
+@function colors($color-name, $color-variant) {
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}
+
+//Color Usage
+$color-button-full              :     colors(purple, base);
+$color-button-full-hover        :     colors(purple, dark);
+$color-button-full-text         :     white;
+$color-button-border            :     colors(purple, base);
+$color-button-empty             :     white;
+$color-button-empty-hover       :     colors(grey, light);
+$color-button-empty-text        :     colors(purple,base);
+
+$color-label                    :     colors(purple, base);
+
+$color-input-border             :     colors(grey, light);
+$color-input-bg                 :     white;
+
+$color-dropdown-border            :     colors(grey, light);
+$color-dropdown-bg                :     white;
+$color-dropdown-default-text      :     colors(grey, dark);
+$color-dropdown-arrow             :     colors(purple, base);
+$color-dropdown-list-hover        :     colors(grey,light);
+$color-dropdown-checkmark-text    :     colors(purple,base);
+$color-dropdown-checkmark-symbol  :     colors(purple,base);
+
+//Theme Specifics
+@mixin el-spacing($top, $left, $down, $right) {
+  padding-top:$top;
+  padding-left: $left;
+  padding-bottom:$down;
+  padding-right: $right;
+}
+
+%el-theme-padding {
+  padding-top:1rem;
+  padding-left: 1rem;
+  padding-bottom:1rem;
+  padding-right: 1rem;
+}
+
+%el-theme-border-style {
+  border:2px solid;
+  border-radius:0.3rem;
+}
