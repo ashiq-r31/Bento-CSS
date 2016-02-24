@@ -1,9 +1,10 @@
 .dropdown-group {
-  display:inline-block;
+  @include el-theme-padding(1rem, 1rem, 2rem, 1rem);
 }
 
 .dropdown {
-  min-width:200px;
+  cursor:pointer;
+  /*min-width:300px;*/
   position:relative;
   background-color:$color-dropdown-bg;
 
@@ -21,7 +22,7 @@
    transform:rotate(90deg);
   }
 
-  .dropdown-select {
+  &-select {
     color:$color-dropdown-default-text;
     min-width:inherit;
     background-color:inherit;
@@ -30,7 +31,7 @@
     border-color:$color-dropdown-border;
   }
 
-  .dropdown-list {
+  &-list {
     position:absolute;
     top:4rem;
     width:100%;

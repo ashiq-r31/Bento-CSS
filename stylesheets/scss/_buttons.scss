@@ -5,12 +5,14 @@
 /*main button styles*/
 .btn {
   &-full {
+    display:block;
     background-color: colors(purple, base);
     color:$color-button-full-text;
-    @extend %el-theme-padding;
+    @include el-theme-padding(1rem,2rem,1rem,2rem);
     @extend %el-theme-border-style;
     @extend %button-border-color;
     transition:background-color 0.2s ease-in-out;
+    margin:1rem;
 
     &:hover {
         background-color:$color-button-full-hover;
@@ -19,8 +21,9 @@
       }
   }
   &-empty {
+    margin:1rem;
     color:$color-button-empty-text;
-    @extend %el-theme-padding;
+    @include el-theme-padding(1rem,2rem,1rem,2rem);
     @extend %el-theme-border-style;
     @extend %button-border-color;
     transition:background-color 0.2s ease-in-out;

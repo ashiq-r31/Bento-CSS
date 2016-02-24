@@ -1,5 +1,9 @@
+.input-group {
+  @include el-theme-padding(1rem, 1rem, 2rem, 1rem);
+}
+
 .input {
-  display:inline-block;
+  width:100%;
   @extend %el-theme-padding;
   @extend %el-theme-border-style;
   border-color:$color-input-border;

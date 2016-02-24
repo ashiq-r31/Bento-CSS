@@ -1,31 +1,13 @@
-.section {
-  padding-top:8rem;
-  padding-bottom:8rem;
-}
-
 .section h1, h3 {
   text-align:center;
 }
 
-form {
-  margin-top:3rem;
-  margin-bottom:3rem;
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
 }
 
-.input-group,
-.dropdown-group {
-  
-  margin-top:2rem;
-  margin-bottom:2rem;
-  text-align:justify;
-  display:inline-block;
-}
-
-.input {
-display:inline;
-width:auto;
-}
-
-.container {
-  border: 1px dashed black;
+.clear:after {
+    clear: both;
 }

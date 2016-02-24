@@ -56,7 +56,7 @@ $color-dropdown-checkmark-text    :     colors(purple,base);
 $color-dropdown-checkmark-symbol  :     colors(purple,base);
 
 //Theme Specifics
-@mixin el-spacing($top, $left, $down, $right) {
+@mixin el-theme-padding($top, $left, $down, $right) {
   padding-top:$top;
   padding-left: $left;
   padding-bottom:$down;
