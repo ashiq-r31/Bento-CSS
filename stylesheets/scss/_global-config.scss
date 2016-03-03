@@ -9,8 +9,14 @@ $font-weight--regular : 400;
 $font-weight--bold    : 700;
 
 //Text
-$base__font-size : 10px;
-$base__line      : 24px;
+$base-font-size : 1rem;
+$base-line-height: $base-font-size / 1.8;
+
+@mixin typography($font-size, $scale:2){
+  font-size:$font-size * $base-font-size;
+  line-height:($font-size / $scale) / 0.5;
+  margin-top:$base-font-size;
+}
 
 
 //Descriptive Base colors

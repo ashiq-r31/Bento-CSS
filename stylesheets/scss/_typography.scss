@@ -17,35 +17,34 @@ p, li  {
   font-size: 1.6rem;
 }
 
-h1 {
-  font-size: 3.6rem;
+.h1 {
+  font-size:3.6rem;
   @extend %font-regular;
   color:colors(purple, base);
-  line-height:2.4;
 }
 
-h2 {
-  font-size: 3.0rem;
+.h2 {
+  @include typography(3);
   @extend %font-regular;
 }
 
-h3 {
-  font-size: 2.4rem;
-  @extend %font-regular;
-  line-height:1.8;
-}
-
-h4 {
-  font-size: 1.8rem;
+.h3 {
+  @include typography(2.4);
   @extend %font-regular;
 }
 
-h5 {
-  font-size: 1.6rem;
+.h4 {
+  @include typography(1.8);
   @extend %font-regular;
 }
 
-h6 {
-  font-size: 1.4rem;
+.h5 {
+  @include typography(1.6);
+  @extend %font-regular;
+  color:colors(grey,dark);
+}
+
+.h6 {
+  @include typography(1.4);;
   @extend %font-regular;
 }

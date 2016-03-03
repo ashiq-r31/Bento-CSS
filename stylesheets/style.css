@@ -75,33 +75,42 @@ body {
   font-size: 1.6rem; }
 
 /*font weight*/
-h1, h2, h3, h4, h5, h6 {
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 400; }
 
 /*Primary typographic adjustments*/
 p, li {
   font-size: 1.6rem; }
 
-h1 {
+.h1 {
   font-size: 3.6rem;
-  color: #8A65E8;
-  line-height: 2.4; }
+  color: #8A65E8; }
 
-h2 {
-  font-size: 3.0rem; }
+.h2 {
+  font-size: 3rem;
+  line-height: 3;
+  margin-top: 1rem; }
 
-h3 {
+.h3 {
   font-size: 2.4rem;
-  line-height: 1.8; }
+  line-height: 2.4;
+  margin-top: 1rem; }
 
-h4 {
-  font-size: 1.8rem; }
+.h4 {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-top: 1rem; }
 
-h5 {
-  font-size: 1.6rem; }
+.h5 {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #898989; }
 
-h6 {
-  font-size: 1.4rem; }
+.h6 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-top: 1rem; }
 
 .btn-full, .btn-empty {
   border-color: #8A65E8; }
@@ -140,8 +149,15 @@ h6 {
   padding-right: 1rem; }
 
 .input {
+  outline: #8A65E8;
   width: 100%;
-  border-color: #EEEEEE; }
+  border-color: #EEEEEE;
+  -webkit-transition: all 0.10s ease-in-out;
+  -moz-transition: all 0.10s ease-in-out;
+  -ms-transition: all 0.10s ease-in-out;
+  -o-transition: all 0.10s ease-in-out; }
+  .input:focus {
+    border-color: #A785FF; }
 
 .label {
   display: block;
@@ -178,6 +194,7 @@ h6 {
     background-color: inherit;
     border-color: #EEEEEE; }
   .dropdown-list {
+    z-index: 1;
     position: absolute;
     top: 4rem;
     width: 100%;
@@ -205,8 +222,12 @@ h6 {
     border-width: 0 3px 3px 0;
     transform: rotate(45deg); }
 
-.section h1, h3 {
-  text-align: center; }
+.h1, .h3, .h5 {
+  text-align: justify; }
+
+.section {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
 
 .clear:before,
 .clear:after {

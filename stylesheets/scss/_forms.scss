@@ -3,10 +3,19 @@
 }
 
 .input {
+  outline:colors(purple,base);
   width:100%;
   @extend %el-theme-padding;
   @extend %el-theme-border-style;
   border-color:$color-input-border;
+
+  -webkit-transition: all 0.10s ease-in-out;
+  -moz-transition: all 0.10s ease-in-out;
+  -ms-transition: all 0.10s ease-in-out;
+  -o-transition: all 0.10s ease-in-out;
+  &:focus {
+    border-color:colors(purple,light);
+  }
 }
 
 .label {
