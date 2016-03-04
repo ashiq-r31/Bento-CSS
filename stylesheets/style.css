@@ -124,8 +124,7 @@ p, li {
   padding-left: 2rem;
   padding-bottom: 1rem;
   padding-right: 2rem;
-  transition: background-color 0.2s ease-in-out;
-  margin: 1rem; }
+  transition: background-color 0.2s ease-in-out; }
   .btn-full:hover {
     background-color: #7955D4;
     border-color: #7955D4;
@@ -141,6 +140,10 @@ p, li {
   .btn-empty:hover {
     background-color: #EEEEEE;
     transition: background-color 0.2s ease-in-out; }
+
+form {
+  margin-left: -1rem;
+  margin-right: -1rem; }
 
 .input-group {
   padding-top: 1rem;

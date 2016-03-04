@@ -12,7 +12,6 @@
     @extend %el-theme-border-style;
     @extend %button-border-color;
     transition:background-color 0.2s ease-in-out;
-    margin:1rem;
 
     &:hover {
         background-color:$color-button-full-hover;
