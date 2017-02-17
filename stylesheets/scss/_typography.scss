@@ -1,50 +1,41 @@
+@import url($font-url--google);
+
+
 html {
-  font-family:'Karla',sans-serif;
-  font-size: 10px;
+  font-family:$font-family--primary;
+  font-size: $base-font-size;
 }
 
 body {
   font-size: 1.6rem;
 }
 
-/*font weight*/
-%font-regular {
-  font-weight:400;
-}
-
 /*Primary typographic adjustments*/
-p, li  {
-  font-size: 1.6rem;
+.p, .li  {
+  @include typography(1.6);
+  color:colors(gray, rolling-stone);
 }
 
 .h1 {
-  font-size:3.6rem;
-  @extend %font-regular;
-  color:colors(purple, base);
+  @include typography(4.8);
 }
 
 .h2 {
-  @include typography(3);
-  @extend %font-regular;
+  @include typography(3.6);
 }
 
 .h3 {
   @include typography(2.4);
-  @extend %font-regular;
 }
 
 .h4 {
-  @include typography(1.8);
-  @extend %font-regular;
+  @include typography(2);
 }
 
 .h5 {
-  @include typography(1.6);
-  @extend %font-regular;
-  color:colors(grey,dark);
+  @include typography(1.8);
 }
 
 .h6 {
-  @include typography(1.4);;
-  @extend %font-regular;
+  @include typography(1.6);;
 }

@@ -1,35 +1,37 @@
-%button-border-color {
-  border-color: $color-button-border;
+
+
+.btn {
+  @include btn($btn-bg, $btn-border, $btn-text);
+
+  &:hover {
+    @include btn-hover($btn-bg-hover, $btn-bg-hover);
+  }
+
 }
 
-/*main button styles*/
-.btn {
-  &-full {
-    display:block;
-    background-color: colors(purple, base);
-    color:$color-button-full-text;
-    @include el-theme-padding(1rem,2rem,1rem,2rem);
-    @extend %el-theme-border-style;
-    @extend %button-border-color;
-    transition:background-color 0.2s ease-in-out;
+.btn-outline {
+  @include btn($btn-outline-bg, $btn-outline-border, $btn-outline-text);
 
-    &:hover {
-        background-color:$color-button-full-hover;
-        border-color:colors(purple, dark);
-        transition:background-color 0.2s ease-in-out;
-      }
+  &:hover {
+    @include btn-hover($btn-outline-bg-hover, $btn-outline-border);
   }
-  &-empty {
-    margin:1rem;
-    color:$color-button-empty-text;
-    @include el-theme-padding(1rem,2rem,1rem,2rem);
-    @extend %el-theme-border-style;
-    @extend %button-border-color;
-    transition:background-color 0.2s ease-in-out;
 
-    &:hover {
-        background-color:$color-button-empty-hover;
-        transition:background-color 0.2s ease-in-out;
-      }
+}
+
+.btn--red {
+  @include btn($btn--red-bg, $btn--red-border, $btn-text);
+
+  &:hover {
+    @include btn-hover($btn--red-bg-hover, $btn--red-bg-hover);
   }
+
+}
+
+.btn--yellow {
+  @include btn($btn--yellow-bg, $btn--yellow-border, $btn-text);
+
+  &:hover {
+    @include btn-hover($btn--yellow-bg-hover, $btn--yellow-bg-hover);
+  }
+
 }

@@ -1,37 +1,67 @@
-//Font Stacks
-$font-url--google        : 'https://fonts.googleapis.com/css?family=Karla:400,700';
 
-$font-family--primary    : 'Karla','Helvetica Neue', Arial, sans-serif;
+// ---- Typography ----- //
+
+//Font Stacks
+
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+$font-family--primary    : 'Source Sans Pro','Helvetica Neue', Arial, sans-serif;
 $font-family--secondary  : 'Helvetica Neue', Arial, sans-serif;
 
 //Font Weights
-$font-weight--regular : 400;
-$font-weight--bold    : 700;
 
-//Text
-$base-font-size : 1rem;
+$font-weight--light   : 300;
+$font-weight--regular : 400;
+$font-weight--bold    : 600;
+
+//Sizes
+
+$base-font-size : 10px;
 $base-line-height: $base-font-size / 1.8;
+
+
+//Mixins 
 
 @mixin typography($font-size, $scale:2){
   font-size:$font-size * $base-font-size;
-  line-height:($font-size / $scale) / 0.5;
+  line-height:$font-size * $base-font-size;
   margin-top:$base-font-size;
 }
 
-
-//Descriptive Base colors
+// ---- Base Colors ----- //
 
 $colors : (
-    purple : (
-        base:   #8A65E8,
-        light:  #A785FF,
-        dark:   #7955D4
+
+    gray : (
+        tundora: #464646,
+        rolling-stone: #6C797D,
+        tower-gray: #A4B9C0,
+        geyser: #C8D9DE,
+        mystic: #E8EFF1,
+        aqua-haze: #F2F6F7
     ),
-    grey : (
-        base:  #C2C2C2,
-        light: #EEEEEE,
-        dark: #898989,
-        darker: #474747
+
+    blue : (
+        scooter: #2BACD7,
+        piction-blue: #32BBE9,
+        malibu: #8DDBF4
+    ),
+
+    green : (
+        mantis:#5DC257,
+        pastel-green:#6CD566,
+        mandang:#BEF2BB
+    ),
+
+    red : (
+        carnation:#F56868,
+        bittersweet:#FF7575,
+        rose-bud:#FAA6A6
+    ),
+
+    yellow: (
+        confetti:#EDCF5A,
+        portica:#F7DA6C,
+        drover:#FDEFB8
     )
 );
 
@@ -39,44 +69,126 @@ $colors : (
   @return map-get(map-get($colors, $color-name), $color-variant);
 }
 
-//Color Usage
-$color-button-full              :     colors(purple, base);
-$color-button-full-hover        :     colors(purple, dark);
-$color-button-full-text         :     white;
-$color-button-border            :     colors(purple, base);
-$color-button-empty             :     white;
-$color-button-empty-hover       :     colors(grey, light);
-$color-button-empty-text        :     colors(purple,base);
 
-$color-label                    :     colors(purple, base);
 
-$color-input-border             :     colors(grey, light);
-$color-input-bg                 :     white;
+// ---- Buttons ----- //
 
-$color-dropdown-border            :     colors(grey, light);
-$color-dropdown-bg                :     white;
-$color-dropdown-default-text      :     colors(grey, dark);
-$color-dropdown-arrow             :     colors(purple, base);
-$color-dropdown-list-hover        :     colors(grey,light);
-$color-dropdown-checkmark-text    :     colors(purple,base);
-$color-dropdown-checkmark-symbol  :     colors(purple,base);
+// Color variables
 
-//Theme Specifics
-@mixin el-theme-padding($top, $left, $down, $right) {
+// primary button
+
+$btn-bg                   :    colors(blue, piction-blue);
+$btn-bg-hover             :    colors(blue, scooter);
+$btn-border               :    colors(blue, piction-blue);
+$btn-text                 :    white;
+
+// red button
+
+$btn--red-bg              :    colors(red, bittersweet);
+$btn--red-bg-hover        :    colors(red, carnation);
+$btn--red-border          :    colors(red, bittersweet);
+
+// yellow button 
+
+$btn--yellow-bg           :    colors(yellow, portica);
+$btn--yellow-bg-hover     :    colors(yellow, confetti);
+$btn--yellow-border       :    colors(yellow, portica);
+
+// outlined button
+
+$btn-outline-bg           :     white;
+$btn-outline-bg-hover     :     colors(gray, mystic);
+$btn-outline-border       :     colors(gray, tower-gray);
+$btn-outline-text         :     colors(gray, rolling-stone);
+
+// Mixins 
+
+@mixin btn($bg-color, $border-color, $text-color) {
+
+  font-weight:$font-weight--bold;
+  background-color: $bg-color;
+  color:$text-color;
+
+  @include block-padding(1rem, 2rem, 1rem, 2rem);
+  @include block-margin(2rem, 0rem, 0rem, 1rem);
+  @include border(2px, solid, $border-color, 5px);
+
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+
+}
+
+@mixin btn-hover($bg-hover-color, $border-hover-color) {
+
+  background-color: $bg-hover-color;
+  border-color:$border-hover-color;
+
+}
+
+
+// ---- Forms ----- //
+
+// Color variables
+
+$label                    :     colors(gray, tundora);
+$input-bg                 :     white;
+$input-border             :     colors(gray, geyser);
+$input-focus              :     colors(gray, tower-gray);
+$input-placeholder        :     colors(gray, tower-gray);
+
+// Mixins
+
+@mixin input($bg-color, $border-color) {
+  
+  background-color:$bg-color;
+
+  @include block-padding(1rem, 1rem, 1rem, 1rem);
+  @include border(2px, solid, $border-color, 5px);
+
+  -webkit-transition: all 0.10s ease-in-out;
+  -moz-transition: all 0.10s ease-in-out;
+  -ms-transition: all 0.10s ease-in-out;
+  -o-transition: all 0.10s ease-in-out;
+
+}
+
+@mixin input-focus($bg-hover-color, $border-hover-color) {
+
+  background-color: $bg-hover-color;
+  border-color:$border-hover-color;
+
+}
+
+// Helper Mixins
+
+@mixin block-padding($top, $left, $bottom, $right) {
+
   padding-top:$top;
   padding-left: $left;
-  padding-bottom:$down;
+  padding-bottom:$bottom;
   padding-right: $right;
+
 }
 
-%el-theme-padding {
-  padding-top:1rem;
-  padding-left: 1rem;
-  padding-bottom:1rem;
-  padding-right: 1rem;
+@mixin block-margin($top, $left, $bottom, $right) {
+
+  margin-top:$top;
+  margin-left: $left;
+  margin-bottom:$bottom;
+  margin-right: $right;
+
 }
 
-%el-theme-border-style {
-  border:2px solid;
-  border-radius:0.3rem;
+@mixin border($size, $style, $color, $radius) {
+
+  border: $size;
+  border-style:$style;
+  border-color: $color;
+  border-radius: $radius;
+
 }
+
+
+
