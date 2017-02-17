@@ -13,7 +13,7 @@ To use the framework use the css file located `stylesheets/style.css`.
 
 <button class="btn-outline">Outlined Button</button>
 
-<button class="btn--green">Green Butto</button>
+<button class="btn--green">Green Button</button>
 
 <button class="btn--red">Red Button</button>
 
@@ -21,9 +21,32 @@ To use the framework use the css file located `stylesheets/style.css`.
 
 ```
 
-
 ### Forms
 
+#### Regular Text Input
+
+```
+<div class="input-group col-lg-6 col-sm-6">
+    <label class="label">Label</label>
+    <input class="input" type="text" placeholder="Example">
+</div>
+
+```
+#### Select 
+
+```
+<div class="input-group col-lg-6 col-sm-6">
+    <label class="label">Label</label>
+    <select class="select">
+         <option>Option 1</option>
+         <option>Option 2</option>
+         <option>Option 3</option>
+         <option>Option 4</option>
+    </select>
+    <span class="select-arrow"></span>
+</div>
+
+```
 ### Helper Classes
 
 ### Work in progress
