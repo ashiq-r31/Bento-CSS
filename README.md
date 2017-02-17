@@ -63,7 +63,7 @@ To use the framework use the css file located `stylesheets/style.css`.
 Margin top is great for spacing between components vertically.
 
 ```
-<div class="pad-top--1">
+<div class="m-top--1">
 ... 1 representing 1rem (goes up to 5)
 </div>
 
@@ -89,12 +89,12 @@ Padding top is better used only in rare occasions i.e. Pushing content down hidd
 
 ```
 
-#### Text Alignment 
+#### Floats 
 
 ```
-<div class="left">Text</div>
-<div class="right">Text</div>
-<div class="center">Text</div>
+<div class="left"> ... </div>
+<div class="right"> ... </div>
+<div class="center"> ... </div>
 
 ```
 ### Work in progress
