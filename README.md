@@ -32,7 +32,7 @@ To use the framework use the css file located `stylesheets/style.css`.
 </div>
 
 ```
-#### Select 
+#### Dropdown Select 
 
 ```
 <div class="input-group col-lg-6 col-sm-6">
@@ -49,5 +49,53 @@ To use the framework use the css file located `stylesheets/style.css`.
 ```
 ### Helper Classes
 
+#### Clearfix
+
+```
+<div class="clearfix">
+... FLoating elements
+</div>
+
+```
+
+#### Margin Top
+
+Margin top is great for spacing between components vertically.
+
+```
+<div class="pad-top--1">
+... 1 representing 1rem (goes up to 5)
+</div>
+
+```
+
+
+#### Padding Top
+
+Padding top is better used only in rare occasions i.e. Pushing content down hidden by a fixed navigation bar.
+
+```
+<div class="pad-top--1">
+... 1 representing 1rem (goes up to 5)
+</div>
+
+```
+#### Text Alignment 
+
+```
+<p class="align-left">Text</p>
+<p class="align-right">Text</p>
+<p class="align-center">Text</p>
+
+```
+
+#### Text Alignment 
+
+```
+<div class="left">Text</div>
+<div class="right">Text</div>
+<div class="center">Text</div>
+
+```
 ### Work in progress
 
