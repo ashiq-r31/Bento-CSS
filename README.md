@@ -18,7 +18,6 @@ To use the framework use the css file located `stylesheets/style.css`.
 <button class="btn--red">Red Button</button>
 
 <button class="btn--yellow">Yellow Button</button>
-
 ```
 
 ### Forms
@@ -30,7 +29,6 @@ To use the framework use the css file located `stylesheets/style.css`.
     <label class="label">Label</label>
     <input class="input" type="text" placeholder="Example">
 </div>
-
 ```
 #### Dropdown Select 
 
@@ -45,7 +43,6 @@ To use the framework use the css file located `stylesheets/style.css`.
     </select>
     <span class="select-arrow"></span>
 </div>
-
 ```
 ### Helper Classes
 
@@ -55,7 +52,6 @@ To use the framework use the css file located `stylesheets/style.css`.
 <div class="clearfix">
 ... FLoating elements
 </div>
-
 ```
 
 #### Margin Top
@@ -66,7 +62,6 @@ Margin top is great for spacing between components vertically.
 <div class="m-top--1">
 ... 1 representing 1rem (goes up to 5)
 </div>
-
 ```
 
 
@@ -78,7 +73,6 @@ Padding top is better used only in rare occasions i.e. Pushing content down hidd
 <div class="pad-top--1">
 ... 1 representing 1rem (goes up to 5)
 </div>
-
 ```
 #### Text Alignment 
 
@@ -86,7 +80,6 @@ Padding top is better used only in rare occasions i.e. Pushing content down hidd
 <p class="align-left">Text</p>
 <p class="align-right">Text</p>
 <p class="align-center">Text</p>
-
 ```
 
 #### Floats 
@@ -94,12 +87,10 @@ Padding top is better used only in rare occasions i.e. Pushing content down hidd
 ```
 <div class="left"> ... </div>
 <div class="right"> ... </div>
-
 ```
 #### Centering
 ```
 <div class="center"> ... </div>
-
 ```
 ### Work in progress
 
