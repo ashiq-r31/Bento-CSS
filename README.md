@@ -94,6 +94,10 @@ Padding top is better used only in rare occasions i.e. Pushing content down hidd
 ```
 <div class="left"> ... </div>
 <div class="right"> ... </div>
+
+```
+#### Centering
+```
 <div class="center"> ... </div>
 
 ```
