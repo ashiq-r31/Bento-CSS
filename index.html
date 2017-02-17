@@ -1,36 +1,29 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
-<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css"  href="stylesheets/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
 <div class="container">
   <div class="section">
     <div class="row">
-      <div class="col-xl-6 col-xl-offset-3 col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
-        <h1 class="h1">The future begins here and now.</h1>
-        <h3 class="h3">Create an account and get started.</h3>
+      <div class="col-lg-8">
+        <h1 class="h1">Heading 1</h1>
+        <h3 class="h2">Heading 2</h3>
+        <h1 class="h3">Heading 3</h1>
+        <h3 class="h4">Heading 4</h3>
+        <h1 class="h5">Heading 5</h1>
+        <h3 class="h6">Heading 6</h3>
+        <p class="p">Paragraph</p>
 
 
 
-        <form class="clear section">
+
+        <form class="clear section row">
 
           <div class="input-group col-lg-6 col-sm-6">
             <label class="label">First Name</label>
             <input class="input" type="text" placeholder="First Name">
           </div>
 
-          <div id="cd" class="dropdown-group col-lg-6 col-sm-6">
-            <label class="label">Gender</label>
-            <div class="dropdown">
-              <div class="dropdown-select">Select Option</div>
-              <ul style="display:none" class="dropdown-list">
-                <li>Male</li>
-                <li>Female</li>
-                <li>Others</li>
-              </ul>
-            </div>
-
-          </div>
           <div class="input-group col-lg-6 col-sm-6">
             <label class="label">Nationality</label>
             <input class="input" type="text" placeholder="Your Country">
@@ -42,81 +35,27 @@
           </div>
 
           <div class="input-group col-lg-6 col-sm-6">
-            <label class="label">Contact Number</label>
+            <label class="label">Contact</label>
             <input class="input" type="text" placeholder="Business Number">
           </div>
 
-          <div id="dd" class="dropdown-group col-lg-6 col-sm-6">
-            <label class="label">What are you?</label>
-            <div class="dropdown">
-              <div class="dropdown-select">Select Option</div>
-              <ul style="display:none" class="dropdown-list">
-                <li>Human</li>
-                <li>Robot</li>
-                <li>Extraterrestrial Organism</li>
-              </ul>
-            </div>
-
+          <div class="input-group col-lg-6 col-sm-6">
+            <label class="label">Gender</label>
+            <select class="input select">
+              <option>Alien</option>
+              <option>Android</option>
+              <option>Hobbit</option>
+              <option>Cat</option>
+            </select>
+            <span class="select-arrow"></span>
           </div>
 
         </form>
-        <button class="btn-full">Register Now</button>
-<!-- <input class="btn-empty" type="submit" value="No, Remind Me Later"> -->
+
+        <button class="btn">Register Now</button>
+        <button class="btn btn-outline">Cancel</button>
       </div>
     </div>
   </div>
 </div>
 
-
-
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script>
-  //Using decorator pattern for multiple dropdowns
-
-  function Dropdown(el) {
-    this.el = el;
-    this.select = el.find('.dropdown-select');
-    this.list = el.find('.dropdown-list');
-    this.listItem = el.find('.dropdown-list li');
-  }
-
-  Dropdown.prototype = {
-      initEvents:function() {
-        var obj = this;
-
-        obj.select.on('click', function(event){
-          event.stopPropagation();
-          obj.list.toggle(100);
-        });
-
-        obj.listItem.on('click', function(event){
-          event.stopPropagation();
-          var clickedItem = $(this).text();
-          obj.listItem.removeClass("checkmark");
-          $(this).addClass("checkmark");
-          obj.select.text(clickedItem).css("color","#8A65E8");
-          obj.list.hide(100);
-
-        });
-
-        $(document).click(function(event){
-          event.stopPropagation();
-          $('.dropdown-list').hide(100);
-        });
-
-    }
-
-  }
-
-  var dd = $('#dd');
-  var origin = new Dropdown(dd);
-  origin.initEvents();
-
-  var cd = $('#cd');
-  var gender = new Dropdown(cd);
-  gender.initEvents();
-
-
-
-</script>
-<!-- <a class="btn-empty" href="#">See More</a> -->
