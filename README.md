@@ -8,6 +8,7 @@ To use the framework use the css file located `stylesheets/style.css`.
 
 ### Buttons
 
+<img src="https://cloud.githubusercontent.com/assets/7483633/23497666/ded2136a-fee9-11e6-8034-8c456d9f5f2b.png">
 
 ```
 <button class="btn">Default Button</button>
@@ -23,7 +24,7 @@ To use the framework use the css file located `stylesheets/style.css`.
 
 ### Forms
 
-<img src="https://cloud.githubusercontent.com/assets/7483633/23497663/dc9ddad4-fee9-11e6-925b-422a4bc65818.png">
+<img width="1241" alt="screen shot 2017-03-02 at 1 50 23 am" src="https://cloud.githubusercontent.com/assets/7483633/23497862/a9ccd906-feea-11e6-95a1-a680da94a48c.png">
 
 #### Regular Text Input
 
