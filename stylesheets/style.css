@@ -224,17 +224,30 @@ input::-webkit-input-placeholder {
   color: #A4B9C0; }
 
 .label {
-  display: block;
+  display: inline-block;
   margin-bottom: 1rem;
   color: #464646;
-  text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600; }
 
 .select {
   -webkit-appearance: none;
   appearance: none;
-  outline: none; }
+  outline: none;
+  width: 100%;
+  background-color: white;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  border: 2px;
+  border-style: solid;
+  border-color: #C8D9DE;
+  border-radius: 5px;
+  -webkit-transition: all 0.10s ease-in-out;
+  -moz-transition: all 0.10s ease-in-out;
+  -ms-transition: all 0.10s ease-in-out;
+  -o-transition: all 0.10s ease-in-out; }
 
 .select-arrow {
   position: absolute;
@@ -248,6 +261,61 @@ input::-webkit-input-placeholder {
   transform: rotate(45deg);
   border-bottom: 2px solid #32BBE9;
   border-right: 2px solid #32BBE9; }
+
+.checkbox,
+.radio {
+  opacity: 0;
+  margin-bottom: 1rem; }
+
+.radio + .label,
+.checkbox + .label {
+  margin-right: 1rem;
+  cursor: pointer;
+  position: relative; }
+
+.radio + .label::before,
+.checkbox + .label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #C8D9DE;
+  position: relative;
+  margin-left: -10px;
+  left: -5px;
+  top: 5px;
+  cursor: pointer;
+  background-color: transparent; }
+
+.radio + .label::before {
+  border-radius: 30px; }
+
+.checkbox + .label::before {
+  border-radius: 5px; }
+
+.checkbox:checked + label::after {
+  content: '';
+  width: 12px;
+  height: 5px;
+  border: 2px solid #32BBE9;
+  border-top: none;
+  border-right: none;
+  display: block;
+  position: absolute;
+  top: 0.9rem;
+  left: -12px;
+  transform: rotate(-45deg); }
+
+.radio:checked + label::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: #32BBE9;
+  display: block;
+  position: absolute;
+  top: 0.9rem;
+  left: -11px; }
 
 .clearfix:after {
   content: " ";
