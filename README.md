@@ -44,6 +44,30 @@ To use the framework use the css file located `stylesheets/style.css`.
     <span class="select-arrow"></span>
 </div>
 ```
+#### Checkbox
+
+```
+<div class="input-group col-lg-12 col-sm-12">
+    <input class="checkbox" type="checkbox" id="first" name="first"> 
+    <label class="label" for="first">Option 1</label>
+
+    <input type="checkbox" class="checkbox" id="second" name="second"> 
+    <label class="label" for="second">Option 2</label>
+</div>
+```
+
+#### Radio Buttons
+
+```
+<div class="input-group col-lg-12 col-sm-12">
+     <input class="radio" type="radio" name="group" id="third">
+     <label for="third" class="label">Option 1</label>
+
+     <input class="radio" type="radio" name="group" id="fourth">
+     <label for="fourth" class="label">Option 2</label>
+</div>
+```
+
 ### Helper Classes
 
 #### Clearfix
