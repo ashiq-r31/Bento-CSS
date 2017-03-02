@@ -118,8 +118,6 @@ Padding top is better used only in rare occasions i.e. Pushing content down hidd
 ```
 ### Work in progress
 
-* Checkbox
-* Radio Button
 * Navigation Bar and Dropdown
 * Status Feedback
 * Tooltips
