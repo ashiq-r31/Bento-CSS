@@ -8,6 +8,8 @@ To use the framework use the css file located `stylesheets/style.css`.
 
 ### Buttons
 
+(https://cloud.githubusercontent.com/assets/7483633/23497663/dc9ddad4-fee9-11e6-925b-422a4bc65818.png)
+
 ```
 <button class="btn">Default Button</button>
 
