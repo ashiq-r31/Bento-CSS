@@ -9,6 +9,7 @@ To use the framework use the css file located `stylesheets/style.css`.
 ### Buttons
 
 <img width="1243" alt="screen shot 2017-03-02 at 1 42 58 am" src="https://cloud.githubusercontent.com/assets/7483633/23498087/9b61b160-feeb-11e6-95d2-6c3875dbf84f.png">
+
 ```
 <button class="btn">Default Button</button>
 
